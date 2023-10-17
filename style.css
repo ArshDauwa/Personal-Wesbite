@@ -559,6 +559,11 @@ header.sticky{
 		transition: .3s;
 	}
 }
+@media (max-width: 768px) {
+	.portrait-image {
+	  display: none;
+	}
+  }
 @media (max-width: 540px){
 	.contact .action form input[type="email"] {
 		width: 310px;
