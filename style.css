@@ -238,6 +238,7 @@ header.sticky{
 	width: 95%;
 	margin: 0 auto;
 	flex-wrap: wrap;
+	.default {cursor: default;}
 }
 .skill {
 	background: lavender;
