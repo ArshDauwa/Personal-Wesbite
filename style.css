@@ -656,7 +656,7 @@ header.sticky{
 	padding-top: 0%;
 }
 .resized-img {
-	width: 1000px; /* Set desired size */
+	width: 2000px; /* Set desired size */
 	height: auto; /* Maintain aspect ratio */
 	transform: translateX(-350px); /* Move image 50px to the left */
 }
