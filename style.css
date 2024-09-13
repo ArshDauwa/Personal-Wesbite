@@ -173,8 +173,7 @@ span{
 	transform: scale(1.1);
 }
 .home-img img{
-	max-width: 100%;
-	width: 540px;
+	width: 1250px;
 	height: auto;
 }
 header.sticky{
@@ -238,7 +237,7 @@ header.sticky{
 	width: 95%;
 	margin: 0 auto;
 	flex-wrap: wrap;
-	.default {cursor: default;}
+	cursor: pointer;
 }
 .skill {
 	background: lavender;
@@ -534,6 +533,9 @@ header.sticky{
 		min-height: 130vh;
 		grid-gap: 1rem;
 	}
+	img {
+        display: none; /* Hide all images */
+    }
 	.home-text{
 		padding-top: 55px;
 	}
@@ -559,12 +561,14 @@ header.sticky{
 		padding: 65px 3%;
 		transition: .3s;
 	}
+	.contact p, .contact h3 {
+		white-space: nowrap;
+        letter-spacing: .5px; /* Increase space between letters */
+        padding: 10px 0; /* Add more space between elements */
+    }
+
+
 }
-@media (max-width: 768px) {
-	.portrait-image {
-	  display: none;
-	}
-  }
 @media (max-width: 540px){
 	.contact .action form input[type="email"] {
 		width: 310px;
@@ -585,8 +589,7 @@ header.sticky{
 	font-weight: 500;
 	text-align: center;
 	color: var(--text-color);
-	line-height: 26px;
-	line-height: 26px;
+	line-height: 30px;
 	margin-bottom: 25px;
 }  
 .contact {
@@ -652,4 +655,8 @@ header.sticky{
 	margin-bottom: -5%;
 	padding-top: 0%;
 }
-
+.resized-img {
+	width: 1000px; /* Set desired size */
+	height: auto; /* Maintain aspect ratio */
+	transform: translateX(-350px); /* Move image 50px to the left */
+}
