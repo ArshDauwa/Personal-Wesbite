@@ -1,5 +1,5 @@
 html, body {
-	overflow-x: hidden;
+    overflow-x: hidden;
 	scroll-behavior: smooth;
 }
 *{
@@ -109,19 +109,23 @@ section{
 	grid-gap: 4rem;
 }
 @keyframes typing {
-	from { width: 0; }
-	to { width: 100%; }
+    0% { width: 0; border-right-color: black; } /* Start with the line visible */
+    90% { width: 100%; border-right-color: black; } /* Keep the line until text is fully written */
+    100% { width: 100%; border-right-color: transparent; } /* Disappear the line */
 }
-.home-text h1{
-	margin: 10px 0px 25px;
-	font-size: var(--big-font);
-	line-height: 1;
-	font-weight: 500;
-	overflow: hidden;
-	border-right: 2px solid #000;
-	white-space: nowrap;
-	animation: typing 3s steps(20, end);    
+
+.home-text h1 {
+    margin: 10px 0px 25px;
+    font-size: var(--big-font);
+    line-height: 1;
+    font-weight: 500;
+    overflow: hidden;
+    border-right: 2px solid #000; /* Initial line color */
+    white-space: nowrap;
+    animation: typing 3s steps(20, end); /* Adjust time and steps as needed */
+    animation-fill-mode: forwards; /* Ensure the line stays transparent after the animation ends */
 }
+
 .home-text h5{
 	margin-bottom: 23px;
 	font-size: 19px;
@@ -547,6 +551,7 @@ header.sticky{
 		width: 440px;
 		height: auto;
 	}
+	
 	.about{
 		grid-template-columns: 1fr;
 	}
@@ -659,5 +664,20 @@ header.sticky{
 .resized-img {
 	width: 1000px; /* Set desired size */
 	height: auto; /* Maintain aspect ratio */
-	transform: translateX(-350px); /* Move image 50px to the left */
+	transform: translateX(-350px); 
+}
+@keyframes bounce {
+	0%, 100% {
+		transform: translateX(-350px) translateY(0); /* Keep image in position and start without bounce */
+	}
+	50% {
+		transform: translateX(-350px) translateY(-10px); /* Apply bounce and maintain X position */
+	}
+}
+
+.resized-img {
+	width: 1000px; /* Set desired size */
+	height: auto; /* Maintain aspect ratio */
+	animation: bounce 2s infinite; /* 2 seconds for the bounce duration and infinite for repetition */
+	animation-timing-function: ease-in-out; /* Smooth the bounce */
 }
