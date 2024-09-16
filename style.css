@@ -666,18 +666,3 @@ header.sticky{
 	height: auto; /* Maintain aspect ratio */
 	transform: translateX(-350px); 
 }
-@keyframes bounce {
-	0%, 100% {
-		transform: translateX(-350px) translateY(0); /* Keep image in position and start without bounce */
-	}
-	50% {
-		transform: translateX(-350px) translateY(-10px); /* Apply bounce and maintain X position */
-	}
-}
-
-.resized-img {
-	width: 1000px; /* Set desired size */
-	height: auto; /* Maintain aspect ratio */
-	animation: bounce 2s infinite; /* 2 seconds for the bounce duration and infinite for repetition */
-	animation-timing-function: ease-in-out; /* Smooth the bounce */
-}
